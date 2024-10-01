@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "dashboard-crewai"
+version = "0.1.0"
+description = "Uso do framework crewAI para gerar dashboards integrados ao strAPI"
+authors = ["Davi Nunes Ribeiro"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.13"
+unstructured = '==0.10.25'
+pyowm = '3.3.0'
+crewai-tools = "0.12.1"
+python-dotenv = "1.0.1"
+langchain = "^0.2.16"
+langchain-core = "^0.2.38"
+langchain-google-genai = "^1.0.3"
+crewai = "^0.66.0"
+google-generativeai = "0.5.2"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/configuration/
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
